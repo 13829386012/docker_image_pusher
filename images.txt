@@ -1,5 +1,1 @@
-docker.elastic.co/elasticsearch/elasticsearch:8.11.3
-mysql:5.7.18
-quay.io/minio/minio:RELEASE.2023-12-20T01-00-02Z
-redis:7.2.4
-edwardelric233/ragflow:oc9
+hihao/ollama-amd64
