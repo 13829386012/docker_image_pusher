@@ -1,1 +1,1 @@
-hihao/ollama-amd64
+swr.cn-north-4.myhuaweicloud.com/infiniflow/ragflow:v0.7.0
