@@ -1,1 +1,1 @@
-xprobe/xinference:latest
+nvidia/cuda:11.0-base
