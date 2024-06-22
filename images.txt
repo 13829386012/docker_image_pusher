@@ -1,1 +1,1 @@
-xprobe/xinference:v0.12.2
+xprobe/xinference:latest
