@@ -1,1 +1,1 @@
-xprobe/xinference:latest-cpu
+infiniflow/ragflow:dev
