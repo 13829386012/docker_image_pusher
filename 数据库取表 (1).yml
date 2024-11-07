@@ -1,0 +1,179 @@
+app:
+  description: "sql\u67E5\u8BE2\u524D\u7F6E\uFF0C\u68C0\u7D22\u76F8\u5173\u8868\u7ED3\
+    \u6784"
+  icon: "\U0001F916"
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: "\u6570\u636E\u5E93\u53D6\u8868"
+workflow:
+  features:
+    file_upload:
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+    opening_statement: ''
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: knowledge-retrieval
+      id: 1717550749131-source-1718336114849-target
+      source: '1717550749131'
+      sourceHandle: source
+      target: '1718336114849'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: knowledge-retrieval
+        targetType: code
+      id: 1718336114849-source-1718345396509-target
+      source: '1718336114849'
+      sourceHandle: source
+      target: '1718345396509'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: end
+      id: 1718345396509-source-1718336169045-target
+      source: '1718345396509'
+      sourceHandle: source
+      target: '1718336169045'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: "\u5F00\u59CB"
+        type: start
+        variables:
+        - label: query
+          max_length: 256
+          options: []
+          required: true
+          type: text-input
+          variable: query
+      height: 90
+      id: '1717550749131'
+      position:
+        x: 80
+        y: 282
+      positionAbsolute:
+        x: 80
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        dataset_ids:
+        - 1076f36a-73e5-44b3-a4f9-766a17aafc65
+        - f2c202bd-0c71-4cfa-b852-7d3c3c533f71
+        desc: ''
+        query_variable_selector:
+        - '1717550749131'
+        - query
+        retrieval_mode: single
+        selected: false
+        single_retrieval_config:
+          model:
+            completion_params: {}
+            mode: chat
+            name: qwen-turbo-chat
+            provider: tongyi
+        title: "\u77E5\u8BC6\u68C0\u7D22"
+        type: knowledge-retrieval
+      height: 92
+      id: '1718336114849'
+      position:
+        x: 384
+        y: 282
+      positionAbsolute:
+        x: 384
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1718345396509'
+          - result
+          variable: tables
+        selected: true
+        title: "\u7ED3\u675F"
+        type: end
+      height: 90
+      id: '1718336169045'
+      position:
+        x: 1100
+        y: 282
+      positionAbsolute:
+        x: 1100
+        y: 282
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "\nfunction main({result}) {\n    return {\n        result: result.map(i=>i.content)\n\
+          \    }\n}\n"
+        code_language: javascript
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: array[string]
+        selected: false
+        title: "\u4EE3\u7801\u6267\u884C"
+        type: code
+        variables:
+        - value_selector:
+          - '1718336114849'
+          - result
+          variable: result
+      height: 54
+      id: '1718345396509'
+      position:
+        x: 721
+        y: 282
+      positionAbsolute:
+        x: 721
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: -171
+      y: 5.5
+      zoom: 1
