@@ -1,2 +1,1 @@
-apache/doris.be-ubuntu:latest
-apache/doris.fe-ubuntu:latest
+apache/doris:latest
