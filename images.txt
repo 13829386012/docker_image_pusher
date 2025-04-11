@@ -1,2 +1,1 @@
-selectdb/doris.fe-ubuntu:3.0.4
-selectdb/doris.be-ubuntu:3.0.4
+selectdb/doris.be-ubuntu:3.0.3
