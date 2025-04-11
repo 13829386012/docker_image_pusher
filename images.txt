@@ -1,1 +1,1 @@
-apache/doris:latest
+selectdb/doris.fe-ubuntu:3.0.3
