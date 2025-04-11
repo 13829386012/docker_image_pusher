@@ -1,2 +1,2 @@
-apache/doris.be-ubuntu:3.0.1
-apache/doris.fe-ubuntu:3.0.1
+apache/doris.be-ubuntu:latest
+apache/doris.fe-ubuntu:latest
