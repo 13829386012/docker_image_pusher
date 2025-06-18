@@ -1,1 +1,1 @@
-samanhappy/mcphub
+linshen/prompt-optimizer:latest
